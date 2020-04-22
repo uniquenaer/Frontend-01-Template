@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+
+<script>
+
+// 1 写一个正则表达式 匹配所有 Number 直接量
+
+/* DecimalLiteral 浮点数
+  •0
+  •0.  0|[1-9]\d*)\.?\d*?
+  •.2  ^\.\d+$
+  •1e3
+
+  0 和 非零开头的整数 ^(0|[1-9]\d*)$
+
+  /^(\.\d+|(0|[1-9]\d*)\.?\d*?)([eE][-\+]?\d+)?$/
+
+BinaryIntegerLiteral 二进制整数
+  - 0b111
+  - 0b/B 010101
+
+  /^0[bB][01]+/
+OctalIntegerLiteral  // 八进制整数
+  - 0o10
+  - 0o/O 1-7  0 1-7
+
+  /^0[oO][0-7]+$/
+
+HexIntegerLiteral 十六进制整数
+  •0xFF0.toString();
+  0.toString(); 
+  - 0x/X   0-9 a-f A-F
+  /^0[xX][0-9A-Fa-f]+$/
+
+  */
+
+const Regx = /^(\.\d+|(0|[1-9]\d*)\.?\d*?)([eE][-\+]?\d+)?$|^0[xX][0-9A-Fa-f]+$|^0[bB][01]+$|^0[oO][0-7]+$/
+
+
+
+
+
+
+
+/* 3 写一个正则表达式，匹配所有的字符串直接量，单引号和双引号 */
+
+// 不会，看了挺多同学的代码的，看不懂
+
+
+
+</script>
