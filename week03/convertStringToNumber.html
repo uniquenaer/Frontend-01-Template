@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  function convertStringToNumber(str, hex = 10) {
+    if (!str) return 0;
+
+    if (
+      !/^(\.\d+|(0|[1-9]\d*)\.?\d*?)([eE][-\+]?\d+)?$|^0[xX][0-9A-Fa-f]+$|^0[bB][01]+$|^0[oO][0-7]+$/.test(
+        str
+      )
+    ) {
+      return NaN;
+    }
+
+    let chars = str.toLowerCase().split("");
+    let number = 0;
+    for (var i = 0; i < chars.length; i++) {
+      number = number * hex;
+      number += chars[i].codePointAt(0) - "0".codePointAt(0);
+    }
+    return number;
+  }
+</script>
